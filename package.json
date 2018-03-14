@@ -1,0 +1,12 @@
+{
+  "name": "@dreipol/lighthouse-audits",
+  "version": "0.1.0",
+  "description": "Collection of default audits from dreipol",
+  "scripts": {
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lighthouse": "^2.9.1"
+  }
+}
