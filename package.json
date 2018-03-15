@@ -5,6 +5,9 @@
   "scripts": {},
   "author": "",
   "license": "MIT",
+  "peerDependencies": {
+    "lighthouse": "^2.9.1"
+  },
   "dependencies": {
     "lighthouse": "^2.9.1"
   }

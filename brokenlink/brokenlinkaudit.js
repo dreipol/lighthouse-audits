@@ -2,8 +2,6 @@
 
 const Audit = require('lighthouse').Audit;
 
-const MAX_SEARCHABLE_TIME = 4000;
-
 class BrokenLinkAudit extends Audit {
     static get meta() {
         return {
@@ -18,9 +16,10 @@ class BrokenLinkAudit extends Audit {
     }
 
     static audit(artifacts) {
+        console.log(artifacts);
         
         return {
-            rawValue: 0,
+            rawValue: 100,
             score: 100,
         };
     }
