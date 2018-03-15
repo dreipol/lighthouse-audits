@@ -5,6 +5,14 @@
   "scripts": {},
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreipol/lighthouse-audits.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dreipol/lighthouse-audits/issues"
+  },
+  "homepage": "https://github.com/dreipol/lighthouse-audits#readme",
   "peerDependencies": {
     "lighthouse": "^2.9.1"
   },
