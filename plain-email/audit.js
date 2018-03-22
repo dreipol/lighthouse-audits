@@ -43,10 +43,6 @@ class PlainEmailAudit extends Audit {
             rawValue: 0,
             score: 100,
         };
-
-
-
-
     }
 }
 

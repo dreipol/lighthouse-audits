@@ -26,12 +26,22 @@ function sendRequest(url) {
  * @param {Object} nodes 
  * @returns {Array}
  */
-function cleanNodes(nodes) {
+function cleanNodes(base, nodes) {
     const checkedUrls = [];
 
     return nodes.filter((node) => {
-        if (node.href && !checkedUrls.includes(node.href)) {
-            checkedUrls.push(node.href);
+        if (!node.href) {
+            return;
+        }
+
+        let url = node.href;
+        if (url.indexOf('://') === -1) {
+            url = URL.resolve(base, url);
+        }
+
+        const protocol = URL.parse(url).protocol;
+        if ((protocol === 'http:' || protocol === 'https:') && !checkedUrls.includes(url)) {
+            checkedUrls.push(url);
             return node;
         }
     });
@@ -48,10 +58,6 @@ function checkLink(url) {
 
     if (!url) {
         return Promise.reject(new Error('No URL provided'));
-    }
-
-    if (url.indexOf('http') === -1) {
-        url = URL.resolve(base, url);
     }
 
     return sendRequest(url)

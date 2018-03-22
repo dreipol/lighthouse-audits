@@ -17,12 +17,13 @@ class BrokenLinkAudit extends Audit {
     }
 
     static audit(artifacts) {
-        let results = cleanNodes(artifacts.BrokenLinkGatherer);
+        const { url, results } = artifacts.BrokenLinkGatherer;
+        let cleanResults = cleanNodes(url, results);
         const failingUrls = [];
         let p = [];
         let total200 = 0;
 
-        return Promise.all(results.map((node) => {
+        return Promise.all(cleanResults.map((node) => {
             return checkLink(node.href)
                 .then(result => {
                     let statusCode = result.statusCode;
@@ -62,7 +63,7 @@ class BrokenLinkAudit extends Audit {
                 return {
                     displayValue: `${failingUrls.length}/${total200}`,
                     rawValue: failingUrls.length,
-                    score: total200 / results.length * 100,
+                    score: total200 / cleanResults.length * 100,
                     details,
                 };
             })
@@ -70,7 +71,7 @@ class BrokenLinkAudit extends Audit {
                 return {
                     debugString: e.message,
                     rawValue: failingUrls.length,
-                    score: total200 / results.length * 100,
+                    score: total200 / cleanResults.length * 100,
                 };
             });
     }

@@ -25,7 +25,10 @@ class BrokenLinkGatherer extends Gatherer {
 
         return options.driver.evaluateAsync(expression)
             .then(results => {
-                return results;
+                return {
+                    url: options.url,
+                    results
+                };
             })
             .catch(e => console.error(e));
     }
