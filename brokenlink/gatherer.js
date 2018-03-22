@@ -3,13 +3,11 @@
 const Gatherer = require('lighthouse').Gatherer;
 const DOMHelpers = require('lighthouse/lighthouse-core/lib/dom-helpers');
 
-
 class BrokenLinkGatherer extends Gatherer {
     constructor() {
         super();
         this.checkedUrls = [];
     }
-
 
     afterPass(options) {
         const driver = options.driver;
@@ -26,9 +24,9 @@ class BrokenLinkGatherer extends Gatherer {
         })()`;
 
         return options.driver.evaluateAsync(expression)
-        .then( results => {
-            return results;
-        })
+            .then(results => {
+                return results;
+            })
             .catch(e => console.error(e));
     }
 }

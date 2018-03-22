@@ -8,8 +8,6 @@ Collection of useful lighthouse audits
 # Setup
 After installing the module you have to add it to the `lighthouse` configuration.
 
-    const { audit, gatherer } = require('@dreipol/lighthouse-audits/MODULE');
-
 Add the `gatherer` to the list of `gatherers` in the `passes` config
 
     ...
@@ -21,7 +19,7 @@ Add the `gatherer` to the list of `gatherers` in the `passes` config
                 networkQuietThresholdMs: 10000,
                 cpuQuietThresholdMs: 10000,
                 gatherers: [
-                    gatherer, // importer from the  module
+                    require.resolve('@dreipol/lighthouse-audits/brokenlink/gatherer'), // importe from the  module
                     'url',
                     'scripts',
                     'css-usage',
@@ -33,7 +31,7 @@ Add `audit` to the list of audits in the lighthouse config
 
     ...
      audits: [
-        audit, // importer from the  module
+        require.resolve('@dreipol/lighthouse-audits/brokenlink/audit'), // import from the  module
          'service-worker',
         'viewport',
         'without-javascript',
@@ -55,3 +53,6 @@ And the last step is to add a custom category (or add the result to an existing 
 
 ## brokenlinks
 Search site for links leading to 404 pages
+
+## plain-email
+Search for plain visible emailadresses. This helps to avoid spam mails

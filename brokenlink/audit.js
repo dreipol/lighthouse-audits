@@ -23,8 +23,6 @@ class BrokenLinkAudit extends Audit {
         let total200 = 0;
 
         return Promise.all(results.map((node) => {
-
-
             return checkLink(node.href)
                 .then(result => {
                     let statusCode = result.statusCode;

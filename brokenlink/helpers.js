@@ -1,7 +1,6 @@
 const request = require('request');
 const URL = require('url');
 
-
 /**
  * send request to url
  * 
@@ -22,6 +21,11 @@ function sendRequest(url) {
     });
 }
 
+/**
+ * Cleanup nodes
+ * @param {Object} nodes 
+ * @returns {Array}
+ */
 function cleanNodes(nodes) {
     const checkedUrls = [];
 
