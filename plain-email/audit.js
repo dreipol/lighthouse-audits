@@ -1,7 +1,6 @@
 'use strict';
 
 const Audit = require('lighthouse').Audit;
-const isEmail = require('is-email');
 const { cleanup } = require('./helpers');
 
 // http://emailregex.com/
@@ -30,19 +29,19 @@ class PlainEmailAudit extends Audit {
             ];
             const details = Audit.makeTableDetails(headings, results);
 
-            return {
+            return Promise.resolve({
                 displayValue: results.length,
                 rawValue: results.length,
                 score: results ? 0 : 100,
                 details
-            };
+            });
         }
 
-        return {
+        return Promise.resolve({
             displayValue: 0,
             rawValue: 0,
             score: 100,
-        };
+        });
     }
 }
 
