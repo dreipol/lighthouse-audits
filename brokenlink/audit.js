@@ -1,7 +1,7 @@
 'use strict';
 
 const Audit = require('lighthouse').Audit;
-const { checkLink, cleanNodes } = require('./helpers');
+const { checkLink, cleanNodes, getScore } = require('./helpers');
 
 const VALID_CODES = [200, 201, 203, 301, 302];
 
@@ -63,7 +63,7 @@ class BrokenLinkAudit extends Audit {
                 return {
                     displayValue: `${failingUrls.length}/${total200}`,
                     rawValue: failingUrls.length,
-                    score: total200 / cleanResults.length * 100,
+                    score: getScore(total200, cleanResults),
                     details,
                 };
             })
@@ -71,7 +71,7 @@ class BrokenLinkAudit extends Audit {
                 return {
                     debugString: e.message,
                     rawValue: failingUrls.length,
-                    score: total200 / cleanResults.length * 100,
+                    score: getScore(total200, cleanResults),
                 };
             });
     }

@@ -22,6 +22,22 @@ function sendRequest(url) {
 }
 
 /**
+ * Calculate the score
+ * 
+ * @param {Number} total200 
+ * @param {Array<Object>} results 
+ */
+function getScore(total200, results) {
+    let resultsLength = results.length;
+    if (total200 === 0 && resultsLength === 0) {
+        return 100;
+    } else {
+        resultsLength = resultsLength === 0 ? 1 : resultsLength;
+        return total200 / resultsLength * 100;
+    }
+}
+
+/**
  * Cleanup nodes
  * @param {Object} nodes 
  * @returns {Array}
@@ -37,6 +53,7 @@ function cleanNodes(base, nodes) {
         let url = node.href;
         if (url.indexOf('://') === -1) {
             url = URL.resolve(base, url);
+            node.href = url;
         }
 
         const protocol = URL.parse(url).protocol;
@@ -71,5 +88,6 @@ function checkLink(url) {
 
 module.exports = {
     checkLink,
-    cleanNodes
+    cleanNodes,
+    getScore
 };
