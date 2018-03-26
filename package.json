@@ -8,6 +8,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "email-check": "^1.1.0",
     "is-email": "^1.0.0",
     "lighthouse": "^2.9.1",
     "request": "^2.85.0"

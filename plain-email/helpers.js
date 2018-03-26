@@ -1,14 +1,18 @@
-const isEmail = require('is-email');
+const isEmail = require('email-check');
 
 function cleanup(results) {
-    results = results.filter((mail) => {
-        if (isEmail(mail)) {
-            return mail;
-        }
-    });
+    return new Promise((res, rej) => {
+        results = results.filter(async (mail) => {
+            const isMailValid = await isEmail(mail);
 
-    return results.map((mail) => {
-        return { mail };
+            if (isMailValid) {
+                return mail;
+            }
+        });
+
+        return res(results.map((mail) => {
+            return { mail };
+        }));
     });
 }
 
