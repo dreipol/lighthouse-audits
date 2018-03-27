@@ -3,7 +3,6 @@
 const Gatherer = require('lighthouse').Gatherer;
 const DOMHelpers = require('lighthouse/lighthouse-core/lib/dom-helpers');
 
-
 class PlainEmailGatherer extends Gatherer {
 
     afterPass(options) {
