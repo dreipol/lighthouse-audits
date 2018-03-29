@@ -11,7 +11,7 @@ class PlainEmailGatherer extends Gatherer {
             return document.body.innerHTML
         })()`;
 
-        return options.driver.evaluateAsync(expression)
+        return options.driver.evaluateAsync(expression);
     }
 }
 

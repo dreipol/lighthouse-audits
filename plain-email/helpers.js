@@ -6,19 +6,23 @@ const isEmail = require('email-check');
  * @param {Array<string>} results 
  */
 function cleanup(results) {
-    return new Promise((res, rej) => {
-        results = results.filter(async (mail) => {
-            const isMailValid = await isEmail(mail);
-
-            if (isMailValid) {
-                return mail;
-            }
-        });
-
-        return res(results.map((mail) => {
-            return { mail };
-        }));
+    const promises = results.map((mail) => {
+        return isEmail(mail)
+            .then(isMailValid => {
+                if (isMailValid) {
+                    return mail;
+                }
+            });
     });
+
+    return Promise.all(promises)
+        .then((mails) => {
+            return mails.filter((mail) => {
+                if (mail) {
+                    return { mail };
+                }
+            });
+        });
 }
 
 module.exports = {
