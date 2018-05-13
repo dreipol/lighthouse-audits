@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const nock = require('nock');
 
 const DOMAIN = 'example.com';
-const BrokenLinkAudit = require('./audit');
+const BrokenLinkAudit = require('./BrokenLinkAudit');
 
 describe('brokenlink', function () {
     describe('Audit', function () {

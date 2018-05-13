@@ -1,6 +1,6 @@
 'use strict';
 
-const Gatherer = require('lighthouse').Gatherer;
+const { Gatherer } = require('lighthouse');
 const DOMHelpers = require('lighthouse/lighthouse-core/lib/dom-helpers');
 
 class BrokenLinkGatherer extends Gatherer {

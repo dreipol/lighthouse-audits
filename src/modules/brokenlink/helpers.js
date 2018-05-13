@@ -3,9 +3,9 @@ const URL = require('url');
 
 /**
  * send request to url
- * 
- * @param {string} url 
- * 
+ *
+ * @param {string} url
+ *
  * @returns {Promise}
  */
 function sendRequest(url) {
@@ -23,9 +23,9 @@ function sendRequest(url) {
 
 /**
  * Calculate the score
- * 
- * @param {Number} total200 
- * @param {Array<Object>} results 
+ *
+ * @param {Number} total200
+ * @param {Array<Object>} results
  */
 function getScore(total200, results) {
     let resultsLength = results.length;
@@ -39,7 +39,7 @@ function getScore(total200, results) {
 
 /**
  * Cleanup nodes
- * @param {Object} nodes 
+ * @param {Object} nodes
  * @returns {Array}
  */
 function cleanNodes(base, nodes) {
@@ -66,8 +66,8 @@ function cleanNodes(base, nodes) {
 
 /**
  * Check if link points to 404 page
- * 
- * @param {any} url 
+ *
+ * @param {any} url
  * @returns {Promise}
  */
 function checkLink(url) {

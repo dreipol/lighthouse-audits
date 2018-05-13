@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "@dreipol/eslint-config"
+    ],
+    "plugins": [
+        "@dreipol/export-keys"
+    ],
+    "globals": {
+    },
+    "rules": {
+
+    }
+}

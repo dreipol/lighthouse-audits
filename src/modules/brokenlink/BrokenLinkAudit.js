@@ -1,6 +1,6 @@
 'use strict';
 
-const Audit = require('lighthouse').Audit;
+const { Audit } = require('lighthouse');
 const { checkLink, cleanNodes, getScore } = require('./helpers');
 
 const VALID_CODES = [200, 201, 203, 301, 302];

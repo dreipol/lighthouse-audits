@@ -3,7 +3,7 @@
   "version": "0.5.1",
   "description": "Collection of default audits from dreipol",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive ./**/*.test.js"
+    "test": "./node_modules/.bin/mocha --recursive ./src/**/*.spec.js"
   },
   "author": "",
   "license": "MIT",
@@ -14,9 +14,9 @@
     "request": "^2.85.0"
   },
   "devDependencies": {
+    "@dreipol/eslint-plugin-export-keys": "^1.1.1",
     "chai": "^4.1.2",
-    "karma": "^2.0.0",
-    "mocha": "^5.0.5",
+    "mocha": "^5.1.1",
     "nock": "^9.2.3"
   }
 }
