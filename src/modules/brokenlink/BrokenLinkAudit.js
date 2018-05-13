@@ -40,7 +40,7 @@ class BrokenLinkAudit extends Audit {
                         url: node.href,
                         text: node.text,
                         status: result.err ? result.err : result.statusCode,
-                        isOk
+                        isOk,
                     };
                 })
                 .then(result => {

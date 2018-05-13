@@ -23,27 +23,29 @@ class PlainEmailAudit extends Audit {
 
         let results = result.match(REGEX);
 
-        if (results) {
-            results = await PlainEmailAudit.cleanupResults(results);
-
-            const headings = [
-                { key: 'mail', itemType: 'code', text: 'Mail' },
-            ];
-            const details = PlainEmailAudit.makeTableDetails(headings, results);
-
+        if (!results) {
             return {
-                displayValue: results.length,
-                rawValue: results.length,
-                score: results ? 0 : 100,
-                details
+                displayValue: 0,
+                rawValue: 0,
+                score: 100,
             };
         }
 
+        results = await PlainEmailAudit.cleanupResults(results);
+
+        const headings = [
+            { key: 'mail', itemType: 'code', text: 'Mail' },
+        ];
+
+        const details = PlainEmailAudit.makeTableDetails(headings, results);
+
         return {
-            displayValue: 0,
-            rawValue: 0,
-            score: 100,
+            displayValue: results.length,
+            rawValue: results.length,
+            score: results ? 0 : 100,
+            details,
         };
+
     }
 
     static async cleanupResults(results) {
@@ -53,6 +55,8 @@ class PlainEmailAudit extends Audit {
             if (isMailValid) {
                 return mail;
             }
+
+            return null;
         }));
     }
 }

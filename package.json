@@ -5,17 +5,22 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha --recursive ./src/**/*.spec.js"
   },
+  "main": "./src/index.js",
   "author": "",
   "license": "MIT",
   "dependencies": {
     "email-check": "^1.1.0",
     "is-email": "^1.0.0",
     "lighthouse": "^2.9.1",
+    "lodash": "^4.17.10",
+    "psi": "^3.1.0",
     "request": "^2.85.0"
   },
   "devDependencies": {
+    "@dreipol/eslint-config": "^4.1.0",
     "@dreipol/eslint-plugin-export-keys": "^1.1.1",
     "chai": "^4.1.2",
+    "eslint": "^4.19.1",
     "mocha": "^5.1.1",
     "nock": "^9.2.3"
   }

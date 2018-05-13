@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 
-const PlainEmailAudit = require('./PlainEmailAudit');
+const PlainEmailAudit = require('../src/modules/plain-email/PlainEmailAudit');
 
 const HTML_MAILTO = `<h1>Hello <a href='mailto://foo@bar.com'>World</a></h1>`;
 const HTML_RAW = `<h1>Hello foo@bar.com</h1>`;

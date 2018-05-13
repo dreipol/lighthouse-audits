@@ -1,0 +1,710 @@
+{
+  "captchaResult": "CAPTCHA_NOT_NEEDED",
+  "kind": "pagespeedonline#result",
+  "id": "https://www.dreipol.ch/",
+  "responseCode": 200,
+  "title": "Die Agentur für Interaction Design",
+  "ruleGroups": {
+    "SPEED": {
+      "score": 57
+    },
+    "USABILITY": {
+      "score": 99
+    }
+  },
+  "pageStats": {
+    "numberResources": 25,
+    "numberHosts": 8,
+    "totalRequestBytes": "4438",
+    "numberStaticResources": 18,
+    "htmlResponseBytes": "87352",
+    "cssResponseBytes": "140727",
+    "imageResponseBytes": "246915",
+    "javascriptResponseBytes": "1886294",
+    "otherResponseBytes": "64114",
+    "numberJsResources": 12,
+    "numberCssResources": 1
+  },
+  "formattedResults": {
+    "locale": "en_US",
+    "ruleResults": {
+      "AvoidLandingPageRedirects": {
+        "localizedRuleName": "Avoid landing page redirects",
+        "ruleImpact": 0,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your page has no redirects. Learn more about {{BEGIN_LINK}}avoiding landing page redirects{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/AvoidRedirects"
+            }
+          ]
+        }
+      },
+      "AvoidPlugins": {
+        "localizedRuleName": "Avoid plugins",
+        "ruleImpact": 0,
+        "groups": [
+          "USABILITY"
+        ],
+        "summary": {
+          "format": "Your page does not appear to use plugins, which would prevent content from being usable on many platforms. Learn more about the importance of {{BEGIN_LINK}}avoiding plugins{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/AvoidPlugins"
+            }
+          ]
+        }
+      },
+      "ConfigureViewport": {
+        "localizedRuleName": "Configure the viewport",
+        "ruleImpact": 0,
+        "groups": [
+          "USABILITY"
+        ],
+        "summary": {
+          "format": "Your page specifies a viewport matching the device's size, which allows it to render properly on all devices. Learn more about {{BEGIN_LINK}}configuring viewports{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/ConfigureViewport"
+            }
+          ]
+        }
+      },
+      "EnableGzipCompression": {
+        "localizedRuleName": "Enable compression",
+        "ruleImpact": 0,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "You have compression enabled. Learn more about {{BEGIN_LINK}}enabling compression{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/EnableCompression"
+            }
+          ]
+        }
+      },
+      "LeverageBrowserCaching": {
+        "localizedRuleName": "Leverage browser caching",
+        "ruleImpact": 9.222934027777779,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Setting an expiry date or a maximum age in the HTTP headers for static resources instructs the browser to load previously downloaded resources from local disk rather than over the network."
+        },
+        "urlBlocks": [
+          {
+            "header": {
+              "format": "{{BEGIN_LINK}}Leverage browser caching{{END_LINK}} for the following cacheable resources:",
+              "args": [
+                {
+                  "type": "HYPERLINK",
+                  "key": "LINK",
+                  "value": "https://developers.google.com/speed/docs/insights/LeverageBrowserCaching"
+                }
+              ]
+            },
+            "urls": [
+              {
+                "result": {
+                  "format": "{{URL}} (expiration not specified)",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s7.addthis.com/l10n/client.de.min.json"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://m.addthisedge.com/live/boost/ra-57b6f32e4ba74522/_ate.track.config_resp"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "59 seconds"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s7.addthis.com/js/300/addthis_widget.js"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "10 minutes"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://www.googletagmanager.com/gtm.js?id=GTM-5QPPRP"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "15 minutes"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/media/filer_public_thumbnails/filer_public/0c/e5/0ce56d28-4c5d-4b83-a1e9-e3737c396da1/dreipol_interaction_design_bosw2018_onlinedoctor.jpg__880x496_q85_crop_subsampling-2_upscale.jpg"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/media/filer_public_thumbnails/filer_public/32/df/32dfdb17-ddbe-4b4d-bd1e-ec1f36bb5b1f/iso_zertifizierung_mit_logo.jpg__880x496_q85_crop_subject_location-728%2C755_subsampling-2_upscale.jpg"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/media/filer_public_thumbnails/filer_public/39/2f/392f64f7-98ba-4f05-abd7-7e37e9af83a0/dreipol-interaction-design-amigos-prelaunch.jpg__880x496_q85_crop_subsampling-2_upscale.jpg"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/media/filer_public_thumbnails/filer_public/57/49/5749fb8f-8789-4b80-8ed3-14e1c069f8ed/1-gsv5dhsnuxap3us1ftcyjw.png__880x496_q85_crop_subject_location-1000%2C562_subsampling-2_upscale.jpg"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/css/app/main.css"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/icons/symbols.svg"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/icons/symbols.svg?_=1526218482424"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/js/app/index.js"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/js/vendor/body/modernizr.js"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}} ({{LIFETIME}})",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://www.google-analytics.com/analytics.js"
+                    },
+                    {
+                      "type": "DURATION",
+                      "key": "LIFETIME",
+                      "value": "2 hours"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "MainResourceServerResponseTime": {
+        "localizedRuleName": "Reduce server response time",
+        "ruleImpact": 0,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your server responded quickly. Learn more about {{BEGIN_LINK}}server response time optimization{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/Server"
+            }
+          ]
+        }
+      },
+      "MinifyCss": {
+        "localizedRuleName": "Minify CSS",
+        "ruleImpact": 0,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your CSS is minified. Learn more about {{BEGIN_LINK}}minifying CSS{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+            }
+          ]
+        }
+      },
+      "MinifyHTML": {
+        "localizedRuleName": "Minify HTML",
+        "ruleImpact": 0,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your HTML is minified. Learn more about {{BEGIN_LINK}}minifying HTML{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+            }
+          ]
+        }
+      },
+      "MinifyJavaScript": {
+        "localizedRuleName": "Minify JavaScript",
+        "ruleImpact": 0.0155,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Compacting JavaScript code can save many bytes of data and speed up downloading, parsing, and execution time."
+        },
+        "urlBlocks": [
+          {
+            "header": {
+              "format": "{{BEGIN_LINK}}Minify JavaScript{{END_LINK}} for the following resources to reduce their size by {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction).",
+              "args": [
+                {
+                  "type": "HYPERLINK",
+                  "key": "LINK",
+                  "value": "https://developers.google.com/speed/docs/insights/MinifyResources"
+                },
+                {
+                  "type": "BYTES",
+                  "key": "SIZE_IN_BYTES",
+                  "value": "155B"
+                },
+                {
+                  "type": "PERCENTAGE",
+                  "key": "PERCENTAGE",
+                  "value": "14%"
+                }
+              ]
+            },
+            "urls": [
+              {
+                "result": {
+                  "format": "Minifying {{URL}} could save {{SIZE_IN_BYTES}} ({{PERCENTAGE}} reduction) after compression.",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/js/6/index.js"
+                    },
+                    {
+                      "type": "BYTES",
+                      "key": "SIZE_IN_BYTES",
+                      "value": "155B"
+                    },
+                    {
+                      "type": "PERCENTAGE",
+                      "key": "PERCENTAGE",
+                      "value": "14%"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "MinimizeRenderBlockingResources": {
+        "localizedRuleName": "Eliminate render-blocking JavaScript and CSS in above-the-fold content",
+        "ruleImpact": 64,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your page has {{NUM_SCRIPTS}} blocking script resources and {{NUM_CSS}} blocking CSS resources. This causes a delay in rendering your page.",
+          "args": [
+            {
+              "type": "INT_LITERAL",
+              "key": "NUM_SCRIPTS",
+              "value": "2"
+            },
+            {
+              "type": "INT_LITERAL",
+              "key": "NUM_CSS",
+              "value": "1"
+            }
+          ]
+        },
+        "urlBlocks": [
+          {
+            "header": {
+              "format": "None of the above-the-fold content on your page could be rendered without waiting for the following resources to load. Try to defer or asynchronously load blocking resources, or inline the critical portions of those resources directly in the HTML."
+            }
+          },
+          {
+            "header": {
+              "format": "{{BEGIN_LINK}}Remove render-blocking JavaScript{{END_LINK}}:",
+              "args": [
+                {
+                  "type": "HYPERLINK",
+                  "key": "LINK",
+                  "value": "https://developers.google.com/speed/docs/insights/BlockingJS"
+                }
+              ]
+            },
+            "urls": [
+              {
+                "result": {
+                  "format": "{{URL}}",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/js/vendor/body/modernizr.js"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "{{URL}}",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/js/app/index.js"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "header": {
+              "format": "{{BEGIN_LINK}}Optimize CSS Delivery{{END_LINK}} of the following:",
+              "args": [
+                {
+                  "type": "HYPERLINK",
+                  "key": "LINK",
+                  "value": "https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery"
+                }
+              ]
+            },
+            "urls": [
+              {
+                "result": {
+                  "format": "{{URL}}",
+                  "args": [
+                    {
+                      "type": "URL",
+                      "key": "URL",
+                      "value": "https://s3-eu-west-1.amazonaws.com/dreipol-website.prod.dreicloud.ch/static/css/app/main.css"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "OptimizeImages": {
+        "localizedRuleName": "Optimize images",
+        "ruleImpact": 0,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your images are optimized. Learn more about {{BEGIN_LINK}}optimizing images{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/OptimizeImages"
+            }
+          ]
+        }
+      },
+      "PrioritizeVisibleContent": {
+        "localizedRuleName": "Prioritize visible content",
+        "ruleImpact": 8,
+        "groups": [
+          "SPEED"
+        ],
+        "summary": {
+          "format": "Your page requires additional network round trips to render the above-the-fold content. For best performance, reduce the amount of HTML needed to render above-the-fold content."
+        },
+        "urlBlocks": [
+          {
+            "header": {
+              "format": "The entire HTML response was not sufficient to render the above-the-fold content. This usually indicates that additional resources, loaded after HTML parsing, were required to render above-the-fold content. {{BEGIN_LINK}}Prioritize visible content{{END_LINK}} that is needed for rendering above-the-fold by including it directly in the HTML response.",
+              "args": [
+                {
+                  "type": "HYPERLINK",
+                  "key": "LINK",
+                  "value": "https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent"
+                }
+              ]
+            },
+            "urls": [
+              {
+                "result": {
+                  "format": "Only about {{PERCENTAGE}} of the final above-the-fold content could be rendered with the full HTML response.",
+                  "args": [
+                    {
+                      "type": "PERCENTAGE",
+                      "key": "PERCENTAGE",
+                      "value": "9%"
+                    }
+                  ]
+                }
+              },
+              {
+                "result": {
+                  "format": "Click to see the screenshot with only the HTML response: {{SCREENSHOT}}",
+                  "args": [
+                    {
+                      "type": "SNAPSHOT_RECT",
+                      "key": "SCREENSHOT",
+                      "value": "snapshot:3"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "SizeContentToViewport": {
+        "localizedRuleName": "Size content to viewport",
+        "ruleImpact": 0,
+        "groups": [
+          "USABILITY"
+        ],
+        "summary": {
+          "format": "The contents of your page fit within the viewport. Learn more about {{BEGIN_LINK}}sizing content to the viewport{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/SizeContentToViewport"
+            }
+          ]
+        }
+      },
+      "SizeTapTargetsAppropriately": {
+        "localizedRuleName": "Size tap targets appropriately",
+        "ruleImpact": 0.1171875,
+        "groups": [
+          "USABILITY"
+        ],
+        "summary": {
+          "format": "Some of the links/buttons on your webpage may be too small for a user to easily tap on a touchscreen. Consider {{BEGIN_LINK}}making these tap targets larger{{END_LINK}} to provide a better user experience.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately"
+            }
+          ]
+        },
+        "urlBlocks": [
+          {
+            "header": {
+              "format": "The following tap targets are close to other nearby tap targets and may need additional spacing around them."
+            },
+            "urls": [
+              {
+                "result": {
+                  "format": "The tap target {{HTML_TEXT}} and {{NUM_OTHERS}} others are close to other tap targets.",
+                  "args": [
+                    {
+                      "type": "STRING_LITERAL",
+                      "key": "HTML_TEXT",
+                      "value": "<a href=\"tel:0041433220644\" class=\"u-reset main-footer--link\">+41 43 322 06 44</a>"
+                    },
+                    {
+                      "type": "INT_LITERAL",
+                      "key": "NUM_OTHERS",
+                      "value": "1"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "UseLegibleFontSizes": {
+        "localizedRuleName": "Use legible font sizes",
+        "ruleImpact": 0,
+        "groups": [
+          "USABILITY"
+        ],
+        "summary": {
+          "format": "The text on your page is legible. Learn more about {{BEGIN_LINK}}using legible font sizes{{END_LINK}}.",
+          "args": [
+            {
+              "type": "HYPERLINK",
+              "key": "LINK",
+              "value": "https://developers.google.com/speed/docs/insights/UseLegibleFontSizes"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "version": {
+    "major": 1,
+    "minor": 15
+  }
+}
