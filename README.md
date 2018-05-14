@@ -1,7 +1,6 @@
 # @dreipol/lighthouse-audits
 [![CircleCI](https://circleci.com/gh/dreipol/lighthouse-audits.svg?style=svg)](https://circleci.com/gh/dreipol/lighthouse-audits)
 
-
 Collection of useful lighthouse audits
 
 
@@ -23,6 +22,7 @@ lighthouse configuration.
     const {
         PSI,
     } = require('@dreipol/lighthouse-audits');
+    
     ...
     passes: [
             {
@@ -41,7 +41,7 @@ lighthouse configuration.
                     'viewport',
                     'viewport-dimensions',
                     ...
-     ...
+    ...
     audits: [
         PSI.PSISpeedScoreAudit,
         
