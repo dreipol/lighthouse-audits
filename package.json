@@ -3,7 +3,7 @@
   "version": "0.5.1",
   "description": "Collection of default audits from dreipol",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --recursive ./src/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha --recursive ./test/**/*.spec.js"
   },
   "main": "./src/index.js",
   "author": "",

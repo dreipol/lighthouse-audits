@@ -4,7 +4,7 @@ module.exports = class PSICssResourcesAudit extends Audit {
     static get meta() {
         return {
             name: 'psi-css-resources',
-            description: 'Get PSI CSS Size',
+            description: 'Get PSI CSS Files',
             failureDescription: '',
             helpText: 'Get more detailed insights about your page',
             requiredArtifacts: ['PSIGatherer'],

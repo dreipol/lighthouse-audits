@@ -1,5 +1,8 @@
 const { Audit } = require('lighthouse');
 
+const getDetail = require('./util/getDetailData');
+const createDetails = require('./util/createDetails');
+
 module.exports = class PSICssSizeAudit extends Audit {
     static get meta() {
         return {
@@ -15,18 +18,20 @@ module.exports = class PSICssSizeAudit extends Audit {
         const psiData = artifacts.PSIGatherer;
 
         let score = 100;
+        const data = [];
+
         if (psiData.config && psiData.config.maxCssBytes) {
-            const diff = psiData.pageStats.cssResponseBytes - psiData.config.maxCssBytes;
-            if (diff > 0) {
-                score = psiData.config.maxCssBytes / diff;
-            }
+            const detailData = getDetail(psiData.pageStats.cssResponseBytes, psiData.config.maxCssBytes);
+            score = detailData.score;
+            data.push(detailData);
         }
 
         return {
             score,
             rawValue: psiData.pageStats.cssResponseBytes,
-            displayValue: `${Math.round(psiData.pageStats.cssResponseBytes / 1024)}kb`,
-
+            displayValue: `${ Math.round(score) }`,
+            optimalValue: `${ psiData.config.maxCssBytes }`,
+            details: createDetails(data),
         };
     }
 };

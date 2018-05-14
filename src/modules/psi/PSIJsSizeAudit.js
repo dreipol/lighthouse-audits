@@ -1,5 +1,8 @@
 const { Audit } = require('lighthouse');
 
+const getDetail = require('./util/getDetailData');
+const createDetails = require('./util/createDetails');
+
 module.exports = class PSIHtmlSizeAudit extends Audit {
     static get meta() {
         return {
@@ -11,43 +14,24 @@ module.exports = class PSIHtmlSizeAudit extends Audit {
         };
     }
 
-
     static async audit(artifacts) {
         const psiData = artifacts.PSIGatherer;
 
         let score = 100;
         const data = [];
 
-
         if (psiData.config && psiData.config.maxJsBytes) {
-            const diff = psiData.pageStats.javascriptResponseBytes - psiData.config.maxJsBytes;
-            if (diff > 0) {
-                score = 100 / (psiData.pageStats.javascriptResponseBytes / diff);
-
-                data.push({
-                    bytes: psiData.pageStats.javascriptResponseBytes,
-                    max: psiData.config.maxJsBytes,
-                    diff: diff,
-                    rate: score,
-                });
-            }
+            const detailData = getDetail(psiData.pageStats.javascriptResponseBytes, psiData.config.maxJsBytes);
+            score = detailData.score;
+            data.push(detailData);
         }
-
-        const headings = [
-            { key: 'bytes', itemType: 'text', text: 'bytes' },
-            { key: 'max', itemType: 'text', text: 'max' },
-            { key: 'diff', itemType: 'text', text: 'diff' },
-            { key: 'rate', itemType: 'text', text: 'rate' },
-        ];
-
-        const details = Audit.makeTableDetails(headings, data);
 
         return {
             score,
             rawValue: psiData.pageStats.javascriptResponseBytes,
-            displayValue: `${score} / ${Math.round(psiData.pageStats.javascriptResponseBytes / 1024)}kb`,
-            optimalValue: `${psiData.config.maxJsBytes}`,
-            details,
+            displayValue: `${ Math.round(score) }`,
+            optimalValue: `${ psiData.config.maxJsBytes }`,
+            details: createDetails(data),
         };
     }
 };
