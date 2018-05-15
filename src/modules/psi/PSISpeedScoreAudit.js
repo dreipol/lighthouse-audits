@@ -41,7 +41,6 @@ module.exports = class PSISpeedScoreAudit extends Audit {
             score: psiData.speedScore,
             displayValue: `${psiData.speedScore}`,
             details,
-
         };
 
     }

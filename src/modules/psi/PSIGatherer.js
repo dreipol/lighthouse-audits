@@ -3,9 +3,7 @@ const psi = require('psi');
 
 module.exports = class PSIGatherer extends Gatherer {
     async afterPass(options) {
-        //const data = await psi(options.url);
-        const data = require('../../../test/data/psi');
-
+        const data = await psi(options.url);
 
         return {
             config: options.config.psi,
