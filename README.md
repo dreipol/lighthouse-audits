@@ -111,3 +111,8 @@ Structure of exported module. You can use these to add them as audits/gatherers
     - PSIJsSizeAudit `{name: 'psi-js'}`
     - PSIJsResourcesAudit `{name: 'psi-js-resources'}`
     - PSICssResourcesAudit `{name: 'psi-css-resources'}`
+
+# Test
+To test the config in the `/example` folder run 
+
+    dreihouse report https://dreipol.ch -f ./example/lh.desktop.js -vvv

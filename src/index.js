@@ -17,6 +17,9 @@ const PSIJsSizeAudit = require('./modules/psi/PSIJsSizeAudit');
 const PSIJsResourcesAudit = require('./modules/psi/PSIJsResourcesAudit');
 const PSICssResourcesAudit = require('./modules/psi/PSICssResourcesAudit');
 
+const MetaGatherer = require('./modules/meta/MetaGatherer');
+const MetaAudit = require('./modules/meta/MetaAudit');
+
 
 module.exports = {
     Categories: {
@@ -43,5 +46,10 @@ module.exports = {
         PSIJsSizeAudit,
         PSIJsResourcesAudit,
         PSICssResourcesAudit,
-    }
+    },
+
+    Meta: {
+        MetaGatherer,
+        MetaAudit
+    },
 };
