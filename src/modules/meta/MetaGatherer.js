@@ -1,31 +1,42 @@
 'use strict';
 
 const { Gatherer } = require('lighthouse');
-const DOMHelpers = require('lighthouse/lighthouse-core/lib/dom-helpers');
 
-class BrokenLinkGatherer extends Gatherer {
+class MetaGatherer extends Gatherer {
     constructor() {
         super();
-        this.checkedUrls = [];
     }
 
-    afterPass(options) {
+    async afterPass(options) {
         const driver = options.driver;
         const expression = `(function() {
-            const selector = 'meta[name=\\'robots\\']';
-            const elements = document.querySelectorAll(selector);
-            return elements
+                        
+            return getElements(document.querySelectorAll('meta[name="robots"]'));
+            
+            function getElements(elements){
+              let myElements = [];
+              elements.forEach(node => {
+                myElements.push({
+                  nodeName: node.nodeName,
+                  attributes: getAttributeObjects(node.attributes)
+                });
+              });
+              
+              return myElements;
+            }
+            
+            function getAttributeObjects(attributes){
+              let attrs = {};
+              for(let i = 0; i <attributes.length; i++){
+                let item = attributes.item(i);
+                attrs[item.name] = item.value;
+              }
+              return attrs;
+            }
         })()`;
 
-        return options.driver.evaluate(expression)
-            .then(results => {
-                return {
-                    url: options.url,
-                    results
-                };
-            })
-            .catch(e => console.error(e));
+        return await driver.evaluateAsync(expression);
     }
 }
 
-module.exports = BrokenLinkGatherer;
+module.exports = MetaGatherer;
