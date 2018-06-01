@@ -92,25 +92,41 @@ Exmaple in your lighthouse config:
 ## API
 Structure of exported module. You can use these to add them as audits/gatherers
 
-- Categories
-    - PSI
-    - Dreipol
-- PlainEmail
-    - PlainEmailGatherer
-    - PlainEmailAudit `{name: 'plain-email-audit'}`
-- BrokenLink
-    - BrokenLinkGatherer
-    - BrokenLinkAudit `{name: 'brokenlink-audit'}`
-- PSI
-    - PSIGatherer
-    - PSISpeedScoreAudit `{name: 'psi-speed-score'}`
-    - PSIUsabilityScoreAudit `{name: 'psi-usability-score'}`
-    - PSIHTMLSizeAudit `{name: 'psi-html'}`
-    - PSICssSizeAudit `{name: 'psi-css'}`
-    - PSIImgSizeAudit `{name: 'psi-img'}`
-    - PSIJsSizeAudit `{name: 'psi-js'}`
-    - PSIJsResourcesAudit `{name: 'psi-js-resources'}`
-    - PSICssResourcesAudit `{name: 'psi-css-resources'}`
+### Plain Email Addresses
+| Class                         | Description | Audit Name
+| -------                       | --------| --- |
+|PlainEmail.PlainEmailGatherer  | Gahters email adresses from a webpage| | 
+|PlainEmail.PlainEmailAudit  | Calculates the score for emails found on the page| `plain-email-audit`|
+
+### Broken Links
+| Class                         | Description | Audit Name
+| -------                       | --------| --- | 
+|BrokenLink.BrokenLinkGatherer  | Gathers all links from a page| |
+|BrokenLink.BrokenLinkAudit  | Check if any link resolves to a 404 page|`brokenlink-audit`|
+
+### Page Meta Tags
+| Class                         | Description | Audit Name
+| -------                       | --------| --- | 
+|Meta.MetaGatherer  | Gather all META tags with the name='robots' on a page|| 
+|Meta.MetaAudit  | Check if any tag has a `no-index` or `no-follow` value | `meta-audit` |
+
+### Page Speed Insights
+| Class                         | Description | Audit Name
+| -------                       | --------| --- |
+|PSI.PSIGatherer  | Runs a PSI report for the page | |
+|PSI.PSISpeedScoreAudit  | Calculate score based on the speed score|`psi-speed-score`| 
+|PSI.PSIUsabilityScoreAudit  | Calculate score based on the usability score|`psi-usability-score`| 
+|PSI.PSIHTMLSizeAudit  | Calculate score based on the HTML size |`psi-html`| 
+|PSI.PSICssSizeAudit  | Calculate score based on the CSS size |`psi-css`| 
+|PSI.PSIImgSizeAudit  | Calculate score based on the IMG size |`psi-img`| 
+|PSI.PSIJsSizeAudit  | Calculate score based on the JS size |`psi-js`| 
+|PSI.PSIJsResourcesAudit  | Calculate score based on the amount of JS resources |`psi-js-resources`| 
+|PSI.PSICssResourcesAudit  | Calculate score based on the amount of CSS resources |`psi-CSS-resources`| 
+
+Example usage
+`see above`
+
+
 
 # Test
 To test the config in the `/example` folder run 
